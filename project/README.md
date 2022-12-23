@@ -1,3 +1,7 @@
+## Create the Network
+
+docker network create mongo-network
+
 ## Starting MongoDB
 
 docker run -d \
@@ -7,7 +11,6 @@ docker run -d \
  --name mongodb \
  --net mongo-network \
  mongo
-
 
 ## Starting Mongo-Express
 
@@ -21,4 +24,5 @@ docker run -d \
  mongo-express
 
 ## Start Mongo Shell
+
 mongosh -u admin -p password --authenticationDatabase admin
